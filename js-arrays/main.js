@@ -94,7 +94,7 @@ const buildAssignmentCards=()=>
         domString +=    `</div>`;
         domString +=    `<p>${assignments[i].topic}</p>`;
         domString +=    `<p>${assignments[i].notes}</p>`;
-        domString +=    `<a href${assignments[i].assignmentUrl}></a>`;
+        domString +=    `<a href=${assignments[i].assignmentUrl}>LINK</a>`;
         domString += `</div>`;
     }
     printToDom('assignment-names', domString);
