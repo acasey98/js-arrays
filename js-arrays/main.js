@@ -1,20 +1,25 @@
 
-const printToDom = (divId, textToPrint) => {
+const printToDom = (divId, textToPrint) => 
+{
     const selectedDiv = document.getElementById(divId);
     selectedDiv.innerHTML = textToPrint;
 };
 
 
-const dinosaurs = [
+const dinosaurs = 
+[
 
     {
-        dinoType: 'Archaeopteryx'
+        dinoType: 'Archaeopteryx',
+        name: 'Malcolm'
     },
     {
-        dinoType: 'Pterodactyl'
+        dinoType: 'Pterodactyl',
+        name: 'Reese'
     },
     {
-        dinoType: 'Megalodon'
+        dinoType: 'Megalodon',
+        name: 'Dewey'
     }
 ];
 
@@ -22,15 +27,21 @@ const dinosaurs = [
 //build up a domstring
 //print domstring to the dom
 
-const buildDinosaurs=()=>{
+const buildDinosaurs=()=>
+{
     let domString = '';
-    for(let i = 0; i < dinosaurs.length; i++){
-        domString += `<h3>${dinosaurs[i].dinoType}</h3>`;
+    for(let i = 0; i < dinosaurs.length; i++)
+    {
+        domString += `<div class='dinosaur'>`;
+        domString +=    `<h3>${dinosaurs[i].dinoType}</h3>`;
+        domString +=    `<p>${dinosaurs[i].name}</p>`;
+        domString += `</div>`;
     }
     printToDom('dino-barn', domString);
 };
 
-const init =()=>{
+const init =()=>
+{
     buildDinosaurs();
 
 };
